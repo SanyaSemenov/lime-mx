@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^limezaim24.ru
+RewriteRule (.*) https://www.limezaim24.ru/$1 [R=301,L]

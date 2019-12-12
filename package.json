@@ -1,0 +1,9 @@
+{
+    "name": "lime-mx",
+    "scripts": {
+        "start": "cd src && browser-sync start ---config ../bs-config.js"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.7"
+    }
+}
