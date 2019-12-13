@@ -340,6 +340,12 @@
 	#reviews .testimonials2 .slick-list .slick-track .item .description {clear:both; float:left; font-family:Roboto !important; font-size:14px; height:220px; line-height:24px; margin:0 0 20px 0; padding:0; position:relative; text-align:center; width:100%;}
 	#reviews .testimonials2 .slick-list .slick-track .item .name {clear:both; float:left; font-family:Roboto !important; font-weight: 500; font-size:16px; line-height:16px; margin:0 0 10px 0; padding:0; position:relative; text-align:center; width:100%;}
 	#reviews .testimonials2 .slick-list .slick-track .item .date {clear:both; float:left; font-family:Roboto !important; font-size:14px; line-height:14px; margin:0; padding:0; position:relative; text-align:center; width:100%;}
+
+	#reviews .slick-list {position: relative;}
+	#reviews .slick-list::before,
+	#reviews .slick-list::after {content: ''; height: 100%; position: absolute; top: 0; bottom: 0; width: 40px; z-index: 100;}
+	#reviews .slick-list::before {left: 0; background: linear-gradient(90deg, #f6f6f6, transparent);}
+	#reviews .slick-list::after {right: 0; background: linear-gradient(-90deg, #f6f6f6, transparent);}
 	
 /* ТЕКСТОВЫЙ БЛОК
 ================================================== */

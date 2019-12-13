@@ -7,7 +7,7 @@
         var url = document.location.href;
         var newUrl, indexParam, urlParams;
 
-        if (targetHref && targetHref.indexOf('www.lime-zaim') > -1) {
+        if (targetHref && targetHref.indexOf('lime24') > -1) {
             e.preventDefault();
             indexParam = url.indexOf('?');
             urlParams = url.slice(indexParam);
