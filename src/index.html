@@ -73,21 +73,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</a>
 			</div>
 			<div class="calculator">
-				<div style="background-color: #eeeeee; color: #333333; border-radius: 5px 5px 0px 0px; font-size: 30px; font-weight: bold; padding: 20px; text-align: center;"> 
-					Заем за 5 минут! 
+				<div style="background-color: #eeeeee; color: #333333; border-radius: 5px 5px 0px 0px; font-size: 30px; font-weight: bold; padding: 20px 30px; text-align: center;"> 
+					¿Cuánto necesitas? 
 				</div>
 				<div style="padding:20px; display: flex">
-					<div style="font-size:22px; color: #333333; padding-bottom: 2px; display: flex; flex:1; flex-direction:column; justify-content: flex-end; align-items: flex-start;">
-						Берёте:
+					<div style="font-size:22px; font-weight:500; color: #333333; padding-bottom: 2px; display: flex; flex:1; flex-direction:column; justify-content: flex-end; align-items: flex-start;">
+						Cantidad:
 					</div>
 					<div style="display: flex; flex-direction:column;justify-content: flex-end">
-						<input id="editText" onchange="change()" style="border-bottom: 2px solid #97c11f; display: inline-block; border-top:none; border-left: none; border-right: none; text-align:right; color: #333333;font-size: 36px; width:110px" type="tel" min="2000" max="30000" step="500" value="10000">
-					</div>
-					<div style="display: flex; flex-direction:column;justify-content: flex-end; color: #707070; padding-bottom: 4px; font-size:18px; margin-left:8px">
-						руб.
+						<div style="border-bottom: 2px solid #97c11f;">
+							<input id="editText" onchange="change(this)" oninput="input(this)" style="display: inline-block; border:none; text-align:right; color: #333333;font: 500 36px/42px Roboto; width:130px" type="tel" min="1000" max="14000" step="100" maxlength="7" value="$3,000">
+						</div>
 					</div>
 				</div>
-				<div style="padding-left:20px; padding-right:20px; display:flex; align-items: center;">
+				<div style="padding-left:30px; padding-right:30px; display:flex; align-items: center;">
 					<svg version="1.1" class="svg" onclick="decrease()" width="40px" height="40px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						 viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve">
 						<g>
@@ -107,35 +106,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</g>
 					</svg>										
 				</div>
-				<div style="padding-left:20px; padding-right:20px; padding-bottom:15px; padding-top:8px;display:flex">
-					<div style="display:flex; flex: 0.5; flex-direction:column; align-items:flex-start; color:#7c7c7c">2 000 руб.</div>
-					<div style="display:flex; flex: 0.5; flex-direction:column; align-items:flex-end; color:#7c7c7c">30 000 руб.</div>
+				<div style="font-size: 13px; line-height: 15px; padding-left:30px; padding-right:30px; padding-bottom:20px; padding-top:8px;display:flex">
+					<div style="display:flex; flex: 0.5; flex-direction:column; align-items:flex-start; color:#7c7c7c">
+						<div><span>$</span><span id="minCalcSum_id">1,000</span></div>
+					</div>
+					<div style="display:flex; flex: 0.5; flex-direction:column; align-items:flex-end; color:#7c7c7c">
+						<div><span>$</span><span id="maxCalcSum_id">14,000</span></div>
+					</div>
 				</div>
-				<div style="padding-left:20px; padding-right:20px">
-					<a href="https://www.lime-zaim.ru/registration/step1" style="padding: 18px 25px; width:100%; font-size:24px" class="button orange_button" target="_self" title="Получить деньги">Получить деньги</a>
+				<div style="padding-left:30px; padding-right:30px">
+					<a href="https://www.lime24.mx/registration/step1" style="padding: 16px 25px; width:100%; font-size:24px; line-height: 28px; font-weight: 700 !important;" class="button orange_button" target="_self" title="Получить деньги">Aplicar ahora</a>
 				</div>
-				<div style="font-size:22px; padding-left:20px; padding-right:20px;padding-top:20px; color: #333333;">
-						Отдаете:&nbsp;
-						<strong id="textLabel" style="font-size: 30px">
-							10000
-						</strong>
-						<span style="font-size:16px">&nbsp;руб.</span>
+				<div style="font-size:22px; font-weight: 500; padding-left:30px; padding-right:30px;padding-top:20px; color: #333333;">
+						Cantidad a pagar:&nbsp;
+						<span id="textLabel" style="font-size: 30px; font-weight: 500">
+							$3,000
+						</span>
 				</div>
-				<hr style="background-color: #e1e1e1; border:0; height:1px; margin-top:10px; margin-left:20px; margin-right:20px">
-				<div style="font-size:18px; color: #333333; text-align:left; padding-left:20px; padding-right:20px; padding-bottom: 20px; padding-top:10px">
-					Процентная ставка: <strong style="font-size:24px;">0%</strong> в день
+				<hr style="background-color: #e1e1e1; border:0; height:1px; margin-top:10px; margin-left:30px; margin-right:30px">
+				<div style="font-size:18px; line-height: 21px; color: #333333; text-align:left; padding-left:30px; padding-right:30px; padding-bottom: 5px; padding-top:10px">
+					Tasa de Interés Diaria Fija: 1.99%*
 				</div>
-			</div>
-			<div class="channels">
-				<p class="description">Способы получения:</p>
-				<div class="logos">
-					<img src="img/slider-VISA.png" alt="VISA" />
-					<img src="img/slider-MASTERCARD.png" alt="MasterCard" />
-					<img src="img/slider-MIR.png" alt="МИР" />
-					<img src="img/slider-QIWI.png" alt="QIWI" />
-					<img src="img/slider-CONTACT.png" alt="CONTACT" />
-					<img src="img/slider-BANK.png" alt="Банковский перевод" />
-				</div>
+				<div style="font-size: 11px; line-height: 13px; color: #B8B8B8; padding-left: 30px; padding-right: 30px; padding-bottom: 20px;">Tasa promedio para clientes nuevos</div>
 			</div>
 		</div>
 	</div>		
@@ -143,81 +135,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="block100">
 	<div id="conditions" class="">
-		<div class="wrapper">
-			<h2 class="block-title">Условия займа</h2>
+		<div class="wrapper wrapper--table">
+			<h2 class="block-title">Condiciones de préstamo</h2>
 			<div class="first_table">
 				<table>
 					<tr>
-						<td class="first header"></td>
-						<td class="second header">Первый заем</td>
-						<td class="third header">Повторный заем</td>
+						<td class="first">Cantidad disponible</td>
+						<td class="second">Hasta $14,000 Pesos</td>
 					</tr>
 					<tr>
-						<td class="first">Сумма</td>
-						<td class="second">до 20 000 руб.</td>
-						<td class="third">70 000 руб.</td>
+						<td class="first">Tasa de interés</td>
+						<td class="second">Hasta 1.99% por día</td>
 					</tr>
 					<tr>
-						<td class="first">Ставка</td>
-						<td class="second">от 0% в день</td>
-						<td class="third">от 0,34% в день</td>
+						<td class="first">Plazo del préstamo</td>
+						<td class="second">Hasta de 65 días</td>
 					</tr>
 					<tr>
-						<td class="first">Скорость рассмотрения</td>
-						<td class="second">до 4 минут</td>
-						<td class="third">до 7 минут</td>
+						<td class="first">Tiempo de aprobación</td>
+						<td class="second">De 10 a 20 minutos</td>
 					</tr>
 					<tr>
-						<td class="first">Информация</td>
-						<td class="second">Данные паспорта, телефон</td>
-						<td class="third">Данные паспорта, телефон</td>
+						<td class="first">Requisitos</td>
+						<td class="second">IFE/INE, teléfono celular</td>
 					</tr>
 					<tr>
 						<td class="first footer"></td>
-						<td class="second footer"><a href="https://www.lime-zaim.ru/registration/step1" class="button orange_button" target="_self" title="Получить деньги">Получить деньги</a></td>
-						<td class="third footer"><a href="https://www.lime-zaim.ru/registration/step1" class="button orange_border_button" target="_self" title="Получить деньги">Получить деньги</a></td>
+						<td class="second footer"><a href="https://www.lime24.mx/registration/step1" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a></td>
 					</tr>
 				</table>
 			</div>
 			<div class="second_table">
 				<table class="green">
 					<tr>
-						<td class="header">Первый заем</td>
+						<td><span class="second_table__label">Cantidad disponible</span><br>Hasta $14,000 Pesos</td>
 					</tr>
 					<tr>
-						<td>до 20 000 руб.</td>
+						<td><span class="second_table__label">Tasa de interés</span><br>Hasta 1.99% por día</td>
 					</tr>
 					<tr>
-						<td>от 0% в день</td>
+						<td><span class="second_table__label">Plazo del préstamo</span><br>Hasta de 65 días</td>
 					</tr>
 					<tr>
-						<td>до 4 минут</td>
+						<td><span class="second_table__label">Tiempo de aprobación</span><br>De 10 a 20 minutos</td>
 					</tr>
 					<tr>
-						<td>Данные паспорта, телефон</td>
+						<td><span class="second_table__label">Requisitos</span><br>IFE/INE, teléfono celular</td>
 					</tr>
 					<tr>
-						<td class="footer"><a href="https://www.lime-zaim.ru/registration/step1" class="button orange_button" target="_self" title="Получить деньги">Получить деньги</a></td>
-					</tr>
-				</table>
-				<table class="gray">
-					<tr>
-						<td class="header">Повторный заем</td>
-					</tr>
-					<tr>
-						<td>70 000 руб.</td>
-					</tr>
-					<tr>
-						<td>от 0,34% в день</td>
-					</tr>
-					<tr>
-						<td>до 7 минут</td>
-					</tr>
-					<tr>
-						<td>Данные паспорта, телефон</td>
-					</tr>
-					<tr>
-						<td class="footer"><a href="https://www.lime-zaim.ru/registration/step1" class="button orange_border_button" target="_self" title="Получить деньги">Получить деньги</a></td>
+						<td class="footer"><a href="https://www.lime24.mx/registration/step1" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a></td>
 					</tr>
 				</table>
 			</div>
@@ -228,25 +194,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="block100">
 	<div id="steps" class="">
 		<div class="wrapper">
-			<h2 class="block-title">Возьмите заем просто и быстро</h2>
+			<h2 class="block-title">¿Cómo puedo obtener un préstamo?</h2>
 			<ul>
 				<li class="item">
-					<img src="img/Step-1.svg" alt="Заполните анкету" />
-					<h3 class="block-title">Заполните анкету</h3>
-					<p class="description">Внесите ваши данные. Это не займет более 10 минут.</p>
+					<img src="img/Step-1.svg" alt="Regístrate con nosotros" />
+					<h3 class="block-title">Regístrate con nosotros</h3>
+					<p class="description">Ingresa tus datos de contacto y tu cuenta para recibir tu préstamo</p>
 				</li>
 				<li class="item">
-					<img src="img/Step-2.svg" alt="Дождитесь одобрения" />
-					<h3 class="block-title">Дождитесь одобрения</h3>
-					<p class="description">Не отлучайтесь. Это делается за 1 минуту.</p>
+					<img src="img/Step-2.svg" alt="Completa la solicitud en línea" />
+					<h3 class="block-title">Completa la solicitud en línea</h3>
+					<p class="description">Sube tus documentos. Personaliza tu préstamo con el monto y plazo deseado</p>
 				</li>
 				<li class="item">
-					<img src="img/Step-3.svg" alt="Получите деньги" />
-					<h3 class="block-title">Получите деньги</h3>
-					<p class="description">Мгновенно перечислим деньги туда, куда вам удобно.</p>
+					<img src="img/Step-3.svg" alt="Toma tu dinero" />
+					<h3 class="block-title">Toma tu dinero</h3>
+					<p class="description">Después de aprobar tu solicitud, enviamos el dinero a tu cuenta de inmediato</p>
 				</li>
 			</ul>
-			<a href="https://www.lime-zaim.ru/registration/step1" class="button orange_button" target="_self" title="Получить деньги">Получить деньги</a>			
+			<a href="https://www.lime24.mx/registration/step1" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a>			
 		</div>
 	</div>		
 </div>
@@ -254,7 +220,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="block100">
 	<div id="reviews" class="">
 		<div class="wrapper">
-			<h2 class="block-title">Что о нас говорят наши клиенты</h2>
+			<h2 class="block-title">Lo que nuestros clientes están diciendo</h2>
+			<!-- TODO: a.semenov add more reviews -->
 
 			<link rel="stylesheet" type="text/css" href="inc/slick/slick.css">
 			<script type="text/javascript" src="inc/slick/slick.min.js"></script>
@@ -266,6 +233,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						autoplay: true,
 						autoplaySpeed: 5000,
 						arrows: true,
+						infinite: true,
 						prevArrow: '<a class="slick-prev"><img src="img/prev-arrow.svg" /></a>',
 						nextArrow: '<a class="slick-next"><img src="img/next-arrow.svg" /></a>',
 						centerMode: true,
@@ -278,6 +246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						autoplay: true,
 						autoplaySpeed: 5000,
 						arrows: true,
+						infinite: true,
 						prevArrow: '<a class="slick-prev"><img src="img/prev-arrow.svg" /></a>',
 						nextArrow: '<a class="slick-next"><img src="img/next-arrow.svg" /></a>',
 						centerMode: true,
@@ -293,13 +262,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<img src="img/yellow-star.svg" />
 						<img src="img/yellow-star.svg" />
 						<img src="img/yellow-star.svg" />
-						<img src="img/yellow-star.svg" />
+						<img src="img/gray-star.svg" />
 						<img src="img/gray-star.svg" />
 					</div>
-					<p class="header">Идеальное МФО</p>
-					<p class="description">Очень нужны были деньги. Решилась на микрозайм. После энного количества часов поисков нашла сайт Лайм-Займ. Все быстро, четко, другие МФО можете не искать.</p>
-					<p class="name">Саша</p>
-					<p class="date">17 января, 2019 г.</p>
+					<p class="description">Soy madre soltera y a menudo tengo gastos imprevistos. Utilizo préstamos de Lime porque es fácil, rápido y confiable. Lime siempre aprueba mi préstamo en línea en poco tiempo y cada vez me dá mejores condiciones</p>
+					<p class="name">Blanca Alcázar</p>
+					<p class="date">3 de Febrero, 2019</p>
 				</div>
 				<div class="item">
 					<div class="rating">
@@ -309,23 +277,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<img src="img/gray-star.svg" />
 						<img src="img/gray-star.svg" />
 					</div>
-					<p class="header">Деньги за 15 минут</p>
-					<p class="description">Нужно было купить лекарства, а до зарплаты была еще неделя. Посоветовали обратиться сюда. Обратилась. Деньги получила на карту уже через 15 минут.</p>
-					<p class="name">Катя</p>
-					<p class="date">4 марта, 2019 г.</p>
-				</div>
-				<div class="item">
-					<div class="rating">
-						<img src="img/yellow-star.svg" />
-						<img src="img/yellow-star.svg" />
-						<img src="img/yellow-star.svg" />
-						<img src="img/gray-star.svg" />
-						<img src="img/gray-star.svg" />
-					</div>
-					<p class="header">Бонусы и скидки</p>
-					<p class="description">Однозначно самый приличный вариант среди таких организаций. У них есть много крутых бонусов и скидок, а проценты почти как в банке. Рекомендую!</p>
-					<p class="name">Денис</p>
-					<p class="date">9 апреля, 2019 г.</p>
+					<p class="description">Soy madre soltera y a menudo tengo gastos imprevistos. Utilizo préstamos de Lime porque es fácil, rápido y confiable. Lime siempre aprueba mi préstamo en línea en poco tiempo y cada vez me dá mejores condiciones</p>
+					<p class="name">Blanca Alcázar</p>
+					<p class="date">3 de Febrero, 2019</p>
 				</div>
 				<div class="item">
 					<div class="rating">
@@ -335,10 +289,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<img src="img/yellow-star.svg" />
 						<img src="img/yellow-star.svg" />
 					</div>
-					<p class="header">Отличный сервис</p>
-					<p class="description">Боялась обращаться за микрокредитом, наслышана о жульничествах МФО. Рискнула, взяла в лайм-займ. И не пожалела. Первый займ действительно без процентов.</p>
-					<p class="name">Анастасия</p>
-					<p class="date">3 мая, 2019 г.</p>
+					<p class="description">A veces mi quincena llega tarde, pero los pagos esos si no fallan. El préstamo de Lime me ayudó a pagar pendientes y así estar tranquilo hasta el día de pago. Gracias Lime!!!</p>
+					<p class="name">Jesus Carranza</p>
+					<p class="date">14 de Diciembre, 2019</p>
 				</div>
 				<div class="item">
 					<div class="rating">
@@ -348,26 +301,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<img src="img/yellow-star.svg" />
 						<img src="img/gray-star.svg" />
 					</div>
-					<p class="header">Всем советую</p>
-					<p class="description">Брал деньги в разных МФО. Могу сказать, что здесь спокойнее всего. Хороший сервис, удобно, быстр. Если уж брать микрозайм, то здесь.</p>
-					<p class="name">Дима</p>
-					<p class="date">28 июня, 2019 г.</p>
+					<p class="description">Por primero vez usé Lime cuando estaba en un viaje con mi familia. Necesitaba dinero extra urgentemente. Solicité por internet en la plataforma de Lime y el mismo día me mandaron dinero. Ahora sé que lo puedo usar en cualquier momento y son serios.</p>
+					<p class="name">Joel González</p>
+					<p class="date">17 de Marzo, 2019</p>
 				</div>
+				
 			</div>
 			
 			<div class="testimonials2">
-								<div class="item">
+				<div class="item">
 					<div class="rating">
 						<img src="img/yellow-star.svg" />
 						<img src="img/yellow-star.svg" />
 						<img src="img/yellow-star.svg" />
-						<img src="img/yellow-star.svg" />
+						<img src="img/gray-star.svg" />
 						<img src="img/gray-star.svg" />
 					</div>
-					<p class="header">Идеальное МФО</p>
-					<p class="description">Очень нужны были деньги. Решилась на микрозайм. После энного количества часов поисков нашла сайт Лайм-Займ. Все быстро, четко, другие МФО можете не искать.</p>
-					<p class="name">Саша</p>
-					<p class="date">17 января, 2019 г.</p>
+					<p class="description">Soy madre soltera y a menudo tengo gastos imprevistos. Utilizo préstamos de Lime porque es fácil, rápido y confiable. Lime siempre aprueba mi préstamo en línea en poco tiempo y cada vez me dá mejores condiciones</p>
+					<p class="name">Blanca Alcázar</p>
+					<p class="date">3 de Febrero, 2019</p>
 				</div>
 				<div class="item">
 					<div class="rating">
@@ -377,23 +329,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<img src="img/gray-star.svg" />
 						<img src="img/gray-star.svg" />
 					</div>
-					<p class="header">Деньги за 15 минут</p>
-					<p class="description">Нужно было купить лекарства, а до зарплаты была еще неделя. Посоветовали обратиться сюда. Обратилась. Деньги получила на карту уже через 15 минут.</p>
-					<p class="name">Катя</p>
-					<p class="date">4 марта, 2019 г.</p>
-				</div>
-				<div class="item">
-					<div class="rating">
-						<img src="img/yellow-star.svg" />
-						<img src="img/yellow-star.svg" />
-						<img src="img/yellow-star.svg" />
-						<img src="img/gray-star.svg" />
-						<img src="img/gray-star.svg" />
-					</div>
-					<p class="header">Бонусы и скидки</p>
-					<p class="description">Однозначно самый приличный вариант среди таких организаций. У них есть много крутых бонусов и скидок, а проценты почти как в банке. Рекомендую!</p>
-					<p class="name">Денис</p>
-					<p class="date">9 апреля, 2019 г.</p>
+					<p class="description">Soy madre soltera y a menudo tengo gastos imprevistos. Utilizo préstamos de Lime porque es fácil, rápido y confiable. Lime siempre aprueba mi préstamo en línea en poco tiempo y cada vez me dá mejores condiciones</p>
+					<p class="name">Blanca Alcázar</p>
+					<p class="date">3 de Febrero, 2019</p>
 				</div>
 				<div class="item">
 					<div class="rating">
@@ -403,10 +341,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<img src="img/yellow-star.svg" />
 						<img src="img/yellow-star.svg" />
 					</div>
-					<p class="header">Отличный сервис</p>
-					<p class="description">Боялась обращаться за микрокредитом, наслышана о жульничествах МФО. Рискнула, взяла в лайм-займ. И не пожалела. Первый займ действительно без процентов.</p>
-					<p class="name">Анастасия</p>
-					<p class="date">3 мая, 2019 г.</p>
+					<p class="description">A veces mi quincena llega tarde, pero los pagos esos si no fallan. El préstamo de Lime me ayudó a pagar pendientes y así estar tranquilo hasta el día de pago. Gracias Lime!!!</p>
+					<p class="name">Jesus Carranza</p>
+					<p class="date">14 de Diciembre, 2019</p>
 				</div>
 				<div class="item">
 					<div class="rating">
@@ -416,10 +353,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<img src="img/yellow-star.svg" />
 						<img src="img/gray-star.svg" />
 					</div>
-					<p class="header">Всем советую</p>
-					<p class="description">Брал деньги в разных МФО. Могу сказать, что здесь спокойнее всего. Хороший сервис, удобно, быстр. Если уж брать микрозайм, то здесь.</p>
-					<p class="name">Дима</p>
-					<p class="date">28 июня, 2019 г.</p>
+					<p class="description">Por primero vez usé Lime cuando estaba en un viaje con mi familia. Necesitaba dinero extra urgentemente. Solicité por internet en la plataforma de Lime y el mismo día me mandaron dinero. Ahora sé que lo puedo usar en cualquier momento y son serios.</p>
+					<p class="name">Joel González</p>
+					<p class="date">17 de Marzo, 2019</p>
 				</div>
 			</div>
 		</div>
@@ -431,63 +367,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="wrapper">
 			<div class="container">
 				<div class="first_column">
-					<h2 class="block-title">Пример расчета займа</h2>
-					<p>
-						Займ в размере <strong>10 000 рублей</strong> выдан на <strong>61 день</strong> с пролонгацией. В году 365 дней, по договору ставка составляет <strong>1% в день</strong> (годовая ставка, соответственно будет равна 365%). 
-						<br />
-						Сумма процентов за 1 год составляет:
-						<br />
-						36 500 руб. (10 000*365% = 36 500),
-						<br />
-						<strong>за 1 день:</strong>
-						<br />
-						100 руб. (36 500/365 = 100),
-						<br />
-						<strong>за 61 день:</strong>
-						<br />
-						6 100 руб. (100*61 = 6100).
-						<br />
-						<br />
-						Общая сумма платежа составляет <strong>16 100 руб.</strong>
-						<br />
-						(10 000 руб. основной долг + 6 100 руб. проценты).
-						<br />
-						<br />
-						Срок кредитования - от <strong>65 дней</strong> до <strong>168 дней</strong>.
-						<br />
-						Процентная ставка - от <strong>0%</strong> до  <strong>365%</strong> годовых.
-					</p>
-				</div>
-				<div class="second_column">
-					<div class="block">
-						<h3 class="block-title">Требования к заемщику</h3>
+					<h2 class="block-title">Lo que necesitas para aplicar:</h2>
+					<div class="layout">
 						<ul>
-							<li>Возраст от 21 года</li>
-							<li>Паспорт гражданина РФ</li>
-							<li>Данные СНИЛС, или ИНН</li>
+							<li>Ser mayor de 18 años</li>
+							<li>Tener tu identificación oficial vigente</li>
+							<li>Cuenta de banco a tu nombre</li>
+							<li>Tu teléfono celular</li>
 						</ul>
 					</div>
-					<div class="block">
-						<h3 class="block-title">Сведения о дополнительных комиссионных сборах</h3>
-						<br />
-						Дополнительная комиссия отсутствует
-					</div>
-					<div class="block">
-						<h3 class="block-title">Последствия при условии неуплаты заёмных средств</h3>
-						<br />
-						В случае невозврата заемных денежных средств в указанный в договоре срок, кредитная организация налагает штраф за просроченные платежи.При несоблюдении заемщиком договоренностей по оплате займа, информация о данном заемщике отправляется в бюро кредитных историй, его задолженность может быть передана одному из коллекторских агентств РФ.
+				</div>
+				<div class="second_column">
+					<h2 class="block-title">Por ejemplo:</h2>
+					<div class="layout">
+						<ul>
+							<li>Elijes un préstamo de $2,000 a un plazo de 65 días</li>
+							<li>El interés del préstamo es del 540% anual*</li>
+							<li>El interés corre diariamente a partir del primer día del plazo acordado</li>
+							<li>Tu monto total para reembolsar el crédito será de $4,262 (Capital + Intereses)</li>
+							<li>Al crear un buen historial con nosotros, accedes a mejores condiciones y opciones de extensión</li>
+						</ul>
+						<div class="note">
+							<div>*Ejemplo considera la aplicación de 2 extensiones preferenciales</div>
+							<div>**Ejemplo considera una tasa fija preferencial del 1.5% diaria.</div>
+							<div>***CAT Promedio: 4,235%. ünicamente para fines informativos.</div>
+							<div>****Oferta dependerá del análisis de la capacidad de pago del solicitante.</div>
+						</div>
 					</div>
 				</div>
-				<a href="https://www.lime-zaim.ru/registration/step1" class="button orange_button" target="_self" title="Получить деньги">Получить деньги</a>	
 			</div>
+			<div class="block">
+				<h2 class="block-title">Importante: Consecuencias de no pagar tu préstamo</h2>
+				<div>Las entidades de crédito pueden imponer multas por retraso de pago sobre el monto de adeudo conforme al límite de plazo especificado en el contrato. En el caso de que no cumplas como prestatario con la obligación contraída en el contrato de crédito respecto al reembolso, la información sobre tu deuda puede ser enviada a uno de los despachos de cobranza en el país autorizados para tal fin para gestionar su cobro.</div>
+			</div>
+			<a href="https://www.lime24.mx/registration/step1" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a>	
 		</div>
 	</div>		
 </div>
 
 
 <div class="block100">
-	<div id="footer" class="">
-		<div class="wrapper">
+	<div id="footer">
+		<div class="wrapper footer--desktop">
 			<div class="foot_left">
 				<div class="logo">
 					<a href="./">
@@ -495,51 +416,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</a>
 				</div>
 				<div class="copyright">
-					<p>© 2013-2019 Кредит онлайн через интернет на банковскую карту или QIWI кошелек в России от МФК “Лайм-Займ” (ООО). Микрофинансовая организация, осуществляет свою деятельность в режиме онлайн под контролем Центрального Банка Российской Федерации, что подтверждается свидетельством о внесении компании в реестр микрофинансовых организаций №651303045004102 от 17.10.2013 года. Процентная ставка от 219% до 547.50% годовых.</p>
+					<p>© 2019 Lime</p>
 				</div>
 				<div class="social">
-					<h3>Поддержка клиента</h3>
+					<h3>Síguenos en:</h3>
 					<ul>
-						<li><a href="https://vk.com/limezaim" class="footer_social_button vkontakte" target="_blank" title="ВКонтакте" rel="nofollow"><img src="img/white-vk-24x24.svg" alt="ВКонтакте" /></a></li>
-						<li><a href="https://www.facebook.com/limezaimofficial" class="footer_social_button facebook" target="_blank" title="Facebook" rel="nofollow"><img src="img/white-fb-24x24.svg" alt="Facebook" /></a></li>
-						<li><a href="https://ok.ru/group/58972556623918" class="footer_social_button odnoklassniki" target="_blank" title="Одноклассники" rel="nofollow"><img src="img/white-ok-24x24.svg" alt="Одноклассники" /></a></li>
+						<li><a href="https://www.facebook.com/lime24.mx/" class="footer_social_button facebook" target="_blank" title="Facebook" rel="nofollow"><img src="img/white-fb-24x24.svg" alt="Facebook" /></a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="foot_center">
-				<div class="links">
-					<h3>Информация</h3>
+				<div class="copyright">
+					<p>Limemx 24, SAPI de CV, SOFOM, ENR, está sujeta a la supervisión de la Comisión Nacional Bancaria y de Valores (CNBV), para efectos de los Artículos 56 y 95 Bis de la Ley General de Organizaciones y Actividades Auxiliares del Crédito, así como de la Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF).<br>Limemx 24, SAPI de CV, SOFOM, ENR, recibe las consultas, reclamaciones o aclaraciones de los usuarios, mediante su Unidad Especializada de Atención a Usuarios, ubicada en Jaime Balmes 11, Mezzanine 3 A, Colonia Los Morales Polanco, Delegación Miguel Hidalgo, C.P. 11510, Ciudad de México, teléfono 55 8526 7940, correo electrónico <a href="mailto:usuarios@lime24.mx">usuarios@lime24.mx</a>.<br>En el caso de no obtener una respuesta satisfactoria, podrás acudir a la CONDUSEF. Domicilio: Av. Insurgentes Sur 762, Planta Baja, Col. Del Valle, C.P. 03100, Ciudad de México, teléfonos: 55 5340 0999 y lada sin costo 800 999 8080, correo electrónico: <a href="mailto:asesoria@condusef.gob.mx">asesoria@condusef.gob.mx</a>, horario de atención: de Lunes a Viernes de 8:30 a 18:00 hrs.</p>
+				</div>
+				<div class="buru">
+					<div class="buru__img">
+						<img src="img/buru.svg" alt="Buró">
+					</div>
+					<div class="buru__text copyright">El Buró de Entidades Financieras contiene información de Limemx24 SAPI DE CV SOFOM ENR sobre nuestro desempeño frente a los Usuarios, por la prestación de productos y servicios. Te invitamos a consultarlo también en la página <a href="http://www.buro.gob.mx" rel="nofollow" target="_blank">http://www.buro.gob.mx</a></div>
+				</div>
+			</div>
+			<div class="foot_right">
+				<div class="support">
+					<p>
+						<a href="mailto:atencionalcliente@lime24.mx">atencionalcliente@lime24.mx</a>
+						<br />
+						<a href="tel:+525585267940">+52 558 526 7940</a>
+						<br>
+						<span>Lun-Vie de 08:30 a 17:30</span>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper footer--mobile">
+			<div class="foot_left">
+				<div class="logo">
+					<a href="./">
+						<img src="img/white-logo-129x48.svg" />
+					</a>
+				</div>
+			</div>
+			<div class="foot_center">
+				<div class="copyright">
+					<p>Limemx 24, SAPI de CV, SOFOM, ENR, está sujeta a la supervisión de la Comisión Nacional Bancaria y de Valores (CNBV), para efectos de los Artículos 56 y 95 Bis de la Ley General de Organizaciones y Actividades Auxiliares del Crédito, así como de la Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF).<br>Limemx 24, SAPI de CV, SOFOM, ENR, recibe las consultas, reclamaciones o aclaraciones de los usuarios, mediante su Unidad Especializada de Atención a Usuarios, ubicada en Jaime Balmes 11, Mezzanine 3 A, Colonia Los Morales Polanco, Delegación Miguel Hidalgo, C.P. 11510, Ciudad de México, teléfono 55 8526 7940, correo electrónico <a href="mailto:usuarios@lime24.mx">usuarios@lime24.mx</a>.<br>En el caso de no obtener una respuesta satisfactoria, podrás acudir a la CONDUSEF. Domicilio: Av. Insurgentes Sur 762, Planta Baja, Col. Del Valle, C.P. 03100, Ciudad de México, teléfonos: 55 5340 0999 y lada sin costo 800 999 8080, correo electrónico: <a href="mailto:asesoria@condusef.gob.mx">asesoria@condusef.gob.mx</a>, horario de atención: de Lunes a Viernes de 8:30 a 18:00 hrs.</p>
+				</div>
+				<div class="buru">
+					<div class="buru__img">
+						<img src="img/buru.svg" alt="Buró">
+					</div>
+					<div class="buru__text copyright">El Buró de Entidades Financieras contiene información de Limemx24 SAPI DE CV SOFOM ENR sobre nuestro desempeño frente a los Usuarios, por la prestación de productos y servicios. Te invitamos a consultarlo también en la página <a href="http://www.buro.gob.mx" rel="nofollow" target="_blank">http://www.buro.gob.mx</a></div>
+				</div>
+				<div class="social">
+					<h3>Síguenos en:</h3>
 					<ul>
-						<li><a href="https://www.lime-zaim.ru/assets/docs/law230.pdf" target="_blank" title="Закон №230-ФЗ">Закон №230-ФЗ</a></li>
-						<li><a href="https://www.lime-zaim.ru/assets/docs/info-for-client.pdf" target="_blank" title="Информация для получения финансовой услуги">Информация для получения финансовой услуги</a></li>
-						<li><a href="https://www.lime-zaim.ru/assets/docs/base-standart-insurance.pdf" target="_blank" title="Базовый стандарт получателя финансовых услуг (страхование)">Базовый стандарт получателя финансовых услуг (страхование) </a></li>
-						<li><a href="https://www.lime-zaim.ru/assets/docs/base-standart.pdf" target="_blank" title="Базовый стандарт защиты прав и интересов">Базовый стандарт защиты прав и интересов</a></li>
-						<li><a href="https://www.lime-zaim.ru/assets/docs/info-brochure-central-bank.pdf" target="_blank" title="Информационная брошюра ЦБ">Информационная брошюра ЦБ</a></li>
-						<li><a href="https://www.lime-zaim.ru/non-retrieve-loan" target="_blank" title="Ответственное кредитование">Ответственное кредитование</a></li>
-						<li><a href="https://www.limecreditgroup.com/" target="_blank" title="Холдинг Lime Credit Group">Холдинг Lime Credit Group</a></li>
+						<li><a href="https://www.facebook.com/lime24.mx/" class="footer_social_button facebook" target="_blank" title="Facebook" rel="nofollow"><img src="img/white-fb-24x24.svg" alt="Facebook" /></a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="foot_right">
 				<div class="support">
-					<h3>Поддержка клиента</h3>
 					<p>
-						Электронная почта: <a href="mailto:support@lime-zaim.ru">support@lime-zaim.ru</a>
+						<a href="mailto:atencionalcliente@lime24.mx">atencionalcliente@lime24.mx</a>
 						<br />
-						Телефон: <a href="tel:+73832079889">+7 (383) 207-98-89</a>
-						<br />
-						630102, Россия, г. Новосибирск, ул. Кирова, д. 48, офис 1401
+						<a href="tel:+525585267940">+52 558 526 7940</a>
+						<br>
+						<span>Lun-Vie de 08:30 a 17:30</span>
 					</p>
 				</div>
-				<div class="logos">
-					<img src="img/logos-1.svg" />
-					<img src="img/logos-2.svg" />
-					<img src="img/logos-3.svg" />
-					<img src="img/logos-4.svg" />
-					<img src="img/logos-5.svg" />
-					<img src="img/logos-6.svg" />
-					</p>
-				</div>	
+				<div class="copyright">
+					<p>© 2019 Lime</p>
+				</div>
 			</div>
 		</div>
 	</div>		
@@ -570,14 +517,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="preloader"><img src="img/preloader.svg" class="rot" /></div>	
 
 	<script type="text/javascript">
-		var initVal = (10000 - 2000) / (30000 - 2000) * 100;
+		var initVal = (initialSum - 1000) / (14000 - 1000) * 100;
 		var rangeSlider = new RangeSlider($("#range"), {
+			stepSum: 100,
+			minSum: 1000,
+			maxSum: 14000,
+			minLabelId: 'minCalcSum_id',
+			maxLabelId: 'minCalcSum_id',
 			size: 1,
 			borderSize: 0.2,
 			percentage: initVal,
-			onMove(e) {
+			onMove: function(e) {
 				var pos = this.getPercentage(this.getCoordinates(e));
-				sum = Math.round((30000 - 2000)*pos + 2000);
+				sum = Math.round((this.maxSum - this.minSum)*pos + this.minSum);
 				update();
 				//console.log(this.getPercentage(this.getCoordinates(e)));
 			}

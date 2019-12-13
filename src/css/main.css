@@ -6,7 +6,7 @@
 ================================================== */
 	*, *:after, *:before {box-sizing:border-box; outline:none;}
 	*, a, body, div, form, frame, h1, h2, h3, h4, h5, h6, html, iframe, img, input, label, legend, li, ol, p, select, span, table, textarea, tbody, td, tfoot, th, thead, tr, ul {box-sizing:border-box; font-weight:normal; margin:0; max-height:999999px; padding:0; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
-	body {clear:both; float:left; font-family:Roboto-Regular !important; font-size:16px; line-height:26px; margin:0; overflow:auto !important; padding:0; position:relative; width:100%;}
+	body {clear:both; float:left; font-family:Roboto !important; font-size:16px; line-height:26px; margin:0; overflow:auto !important; padding:0; position:relative; width:100%;}
 	.wrapper {clear:both; float:none; height:100%; margin:0 auto; max-width:1150px; padding:0 30px; position:relative; width:100%;}
 	.block100 {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
 
@@ -45,7 +45,7 @@
 		.button,
 		.button:visited,	
 		.button:hover
-		{border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border:0; cursor:pointer; display:inline-block; font-family:Roboto-Medium !important; font-size:18px; font-weight:normal !important; line-height:18px; outline:none; position:relative; text-align:center; text-decoration:none !important;}
+		{border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border:0; cursor:pointer; display:inline-block; font-family:Roboto !important; font-weight: 500; font-size:18px; font-weight:normal !important; line-height:18px; outline:none; position:relative; text-align:center; text-decoration:none !important;}
 		
 		.button:active
 		{bottom:-1px;}
@@ -60,6 +60,7 @@
 			background: linear-gradient(to bottom,  rgba(243,145,0,1) 0%,rgba(235,93,11,1) 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f39100', endColorstr='#eb5d0b',GradientType=0 );
 			color:rgba(255,255,255,1);
+			font-weight: 700;
 		}
 
 		.orange_button:hover,
@@ -88,7 +89,6 @@
 ============================================== */
 	/* БЕЛЫЕ БЛОКИ */
 		#slider .calculator,
-		#slider .channels,
 		#steps,
 		#reviews .testimonials1 .slick-list .slick-track .item,
 		#reviews .testimonials2 .slick-list .slick-track .item,
@@ -100,7 +100,7 @@
 	/* СЕРЫЕ БЛОКИ */
 		html,
 		body,
-		#text .container .second_column .block
+		#text .block
 		{background-color:rgba(246,246,246,1);}
 		
 	/* ЗЕЛЕНЫЕ БЛОКИ */
@@ -115,14 +115,12 @@
 /* ТЕНИ
 ============================================== */	
 	#slider .calculator,
-	#slider .channels,
 	#conditions .second_table table.green,
 	.scrollup_button
 	{box-shadow: 2px 2px 20px rgba(0,0,0,0.2);}
 	
 	#reviews .testimonials1 .slick-list .slick-track .item,
 	#reviews .testimonials2 .slick-list .slick-track .item,
-	#text .container,
 	.desktop_fixed_menu
 	{box-shadow: 2px 2px 20px rgba(0,0,0,0.1);}
 	
@@ -133,9 +131,7 @@
 		{color:rgba(0,0,0,1);}
 		
 	/* СЕРЫЙ ТЕКСТ */
-		#slider .channels .description,
 		#conditions h2.block-title,
-		#conditions .first_table table tr td.third,
 		#conditions .second_table table.gray tr td,
 		#steps h2.block-title,
 		#steps ul li .description,
@@ -156,14 +152,15 @@
 	/* СЕРЫЙ ТЕКСТ */
 		#reviews .testimonials1 .slick-list .slick-track .item .description,
 		#reviews .testimonials2 .slick-list .slick-track .item .description,
-		#footer .foot_left .copyright,
+		#footer .copyright,
+		#footer .copyright a,
 		#footer .foot_right .support p
 		{color:#848484;}
 		
 	/* БЕЛЫЙ ТЕКСТ */
 		#conditions .first_table table tr td.second,
 		#conditions .second_table table.green tr td,
-		#footer .foot_left .social h3,
+		#footer .social h3,
 		#footer .foot_center .links h3,
 		#footer .foot_right .support h3
 		{color:#FFFFFF;}
@@ -199,7 +196,6 @@
 	/* ОБЩИЕ ПРАВИЛА ДЛЯ КАРТИНОК */
 		img,
 		#slider .logo a img,
-		#slider .channels .logos img,
 		#steps ul li img,
 		#reviews .testimonials1 .slick-list .slick-track .item .rating img,
 		#reviews .testimonials2 .slick-list .slick-track .item .rating img,
@@ -266,64 +262,59 @@
 
 /* СЛАЙДЕР С КАЛЬКУЛЯТОРОМ
 ================================================== */
-	#slider {background:transparent url('../img/slider-background.png') no-repeat center -50px; clear:both; display:block; float:left; height:550px; margin:0; padding:0; position:relative; width:100%;}
+	#slider {background:transparent url('../img/slider-background.png') no-repeat center; clear:both; display:block; float:left; height:650px; margin:0; padding:0; position:relative; width:100%;}
 	#slider .logo {clear:both; float:left; margin:0; padding:20px 0; position:relative; width:100%;}
 	#slider .logo a {clear:both; float:left; margin:0; padding:0; position:relative; text-decoration:none !important;}
 	#slider .logo a img {clear:both; float:left; margin:0; padding:0; position:relative;}
-	#slider .calculator {border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; clear:both; float:right; margin:0 0 70px 0; padding:0; position:relative; top:-45px; width:40%;}
-	#slider .channels {border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; bottom:-45px; clear:both; float:left; left:12%; margin:0; padding:20px 15px; position:absolute; width:76%; z-index:99;}
-	#slider .channels .description {clear:none; display:inline-block; float:left; font-family:Roboto-Medium !important; font-size:18px; line-height:28px; margin:12px 0 0 0; padding:0; position:relative;}
-	#slider .channels .logos {clear:none; display:inline-block; float:right; margin:0; padding:0; position:relative;}
-	#slider .channels .logos img {clear:none; display:inline-block; float:left; height:50px; margin:0 10px 0 0; padding:0; position:relative; width:100px;}
-	#slider .channels .logos img:last-child {margin:0;}
+	#slider .calculator {border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; clear:both; float:right; margin:0 0 70px 0; padding:0; position:relative; width:40%;}
 
 /* УСЛОВИЯ
 ================================================== */
 	#conditions {clear:both; float:left; margin:0; padding:110px 0 150px 0; position:relative; width:100%;}
-	#conditions h2.block-title {clear:both; float:left; font-family:Roboto-Bold !important; font-size:36px; line-height:46px; margin:0 0 50px 0; padding:0; position:relative; text-align:center; width:100%;}
-	#conditions .first_table {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
-	#conditions .first_table table {border:0; border-collapse:collapse; width:100%;}
+	#conditions h2.block-title {clear:both; float:left; font-family:Roboto !important; font-weight: 700; font-size:36px; line-height:46px; margin:0 0 50px 0; padding:0; position:relative; text-align:center; width:100%;}
+	#conditions .first_table {clear:both; margin:0; padding:0; position:relative; width:66%; margin-left: auto; margin-right: auto}
+	#conditions .first_table table {border:0; border-collapse:collapse; width:100%; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; overflow: hidden;}
 	#conditions .first_table table tr td {border-color:#e7e7e7; border-style:solid; border-top-width:1px; border-right-width:0; border-bottom-width:1px; border-left-width:0; padding:20px 30px;}
 	#conditions .first_table table tr:first-child td {border-top-width:0;}
 	#conditions .first_table table tr:last-child td {border-bottom-width:0;}
-	#conditions .first_table table tr td.first {font-family:Roboto-Medium !important; font-size:16px; line-height:26px; text-align:center; width:33%;}
-	#conditions .first_table table tr td.second {font-family:Roboto-Medium !important; font-size:16px; line-height:26px; text-align:center; width:33%;}
-	#conditions .first_table table tr td.third {font-family:Roboto-Medium !important; font-size:16px; line-height:26px; text-align:center; width:33%;}
-	#conditions .first_table table tr td.header {border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0; font-family:Roboto-Medium !important; font-size:24px !important; line-height:34px !important; padding:25px 30px;}
-	#conditions .first_table table tr td.footer {border-radius:0 0 5px 5px; -webkit-border-radius:0 0 5px 5px; -moz-border-radius:0 0 5px 5px; padding:25px 30px;}
+	#conditions .first_table table tr td.first {font-family:Roboto !important; font-weight: 500; font-size:16px; line-height:26px; text-align:center; width:33%;}
+	#conditions .first_table table tr td.second {font-family:Roboto !important; font-weight: 500; font-size:16px; line-height:26px; text-align:center; width:33%;}
+	#conditions .first_table table tr td.header {font-family:Roboto !important; font-weight: 500; font-size:24px !important; line-height:34px !important; padding:25px 30px;}
+	#conditions .first_table table tr td.footer {padding:25px 30px;}
 	#conditions .first_table table tr td .button {padding:18px 25px; width:100%;}
 	
 	#conditions .second_table {clear:both; display:none; float:left; margin:0; padding:0; position:relative; width:100%;}
-	#conditions .second_table table {border:0; border-collapse:collapse; width:100%;}
-	#conditions .second_table table tr td {border-color:#e7e7e7; border-style:solid; border-top-width:1px; border-right-width:0; border-bottom-width:1px; border-left-width:0; font-family:Roboto-Medium !important; font-size:16px; line-height:26px; padding:20px 30px; text-align:center;}
+	#conditions .second_table table {border:0; border-collapse:collapse; width:100%; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; overflow: hidden;}
+	#conditions .second_table table tr td {border-color:#e7e7e7; border-style:solid; border-top-width:1px; border-right-width:0; border-bottom-width:1px; border-left-width:0; font-family:Roboto !important; font-weight: 500; font-size:16px; line-height:26px; padding:20px 30px; text-align:center;}
 	#conditions .second_table table tr:first-child td {border-top-width:0;}
 	#conditions .second_table table tr:last-child td {border-bottom-width:0;}
-	#conditions .second_table table tr td.header {border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0; font-family:Roboto-Medium !important; font-size:24px !important; line-height:34px !important; padding:25px 30px;}
-	#conditions .second_table table tr td.footer {border-radius:0 0 5px 5px; -webkit-border-radius:0 0 5px 5px; -moz-border-radius:0 0 5px 5px; padding:20px 30px 30px 30px;}
-	#conditions .second_table table.gray tr td.footer {border-radius:0 0 5px 5px; -webkit-border-radius:0 0 5px 5px; -moz-border-radius:0 0 5px 5px; padding:20px 30px 40px 30px;}
+	#conditions .second_table table tr td.header {font-family:Roboto !important; font-weight: 500; font-size:24px !important; line-height:34px !important; padding:25px 30px;}
+	#conditions .second_table table tr td.footer {padding:20px 30px 30px 30px;}
+	#conditions .second_table table.gray tr td.footer {padding:20px 30px 40px 30px;}
 	#conditions .second_table table tr td .button {padding:18px 25px; width:100%;}
+	#conditions .second_table table tr td .second_table__label {display:inline-block; font-size:12px; line-height:14px;}
 
 /* ШАГИ
 ================================================== */
 	#steps:before {background:url('../img/d23cf23.png') no-repeat top center; content:""; display:inline-block; height:66px; left:0; position:absolute; top:-66px; width:100%;}
 	#steps:after {background:url('../img/d23cf254.png') no-repeat top center; content:""; display:inline-block; height:66px; left:0; position:absolute; bottom:-66px; width:100%;}
 	#steps {clear:both; float:left; margin:0; padding:50px 0; position:relative; text-align:center; width:100%;}
-	#steps h2.block-title {clear:both; float:left; font-family:Roboto-Bold !important; font-size:36px; line-height:46px; margin:0 0 50px 0; padding:0; position:relative; text-align:center; width:100%;}
+	#steps h2.block-title {clear:both; float:left; font-family:Roboto !important; font-weight: 700; font-size:36px; line-height:46px; margin:0 0 50px 0; padding:0; position:relative; text-align:center; width:100%;}
 	#steps ul {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
 	#steps ul li.item {clear:none; display:inline-block; float:left; margin:0 5% 0 0; padding:0; position:relative; text-align:center; width:30%;}
 	#steps ul li.item:last-child {margin:0;}
 	#steps ul li img {margin:0 0 40px 0; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; -webkit-transition:all 0.3s ease; transition:all 0.3s ease;}
 	#steps ul li img:hover {margin:0 0 40px 0; -moz-transform: rotate(-5deg); -o-transform: rotate(-5deg); -ms-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); transform: rotate(-5deg);}	
-	#steps ul li h3.block-title {clear:both; float:left; font-family:Roboto-Medium !important; font-size:24px; line-height:34px; margin:0 0 15px 0; padding:0; position:relative; text-align:center; width:100%;}
-	#steps ul li .description {clear:both; float:left; font-family:Roboto-Regular !important; font-size:16px; line-height:26px; margin:0; padding:0; position:relative; text-align:center; width:100%;}
+	#steps ul li h3.block-title {clear:both; float:left; font-family:Roboto !important;font-weight: 500; font-size:24px; line-height:34px; margin:0 0 15px 0; padding:0; position:relative; text-align:center; width:100%;}
+	#steps ul li .description {clear:both; float:left; font-family:Roboto !important; font-size:16px; line-height:26px; margin:0; padding:0; position:relative; text-align:center; width:100%;}
 	#steps .button {margin:50px 0 0 0; padding:18px 25px; width:290px;}
 
 /* ОТЗЫВЫ
 ================================================== */
 	#reviews {clear:both; float:left; margin:0; padding:150px 0; position:relative; text-align:center; width:100%;}
-	#reviews h2.block-title {clear:both; float:left; font-family:Roboto-Bold !important; font-size:36px; line-height:46px; margin:0 0 50px 0; padding:0; position:relative; text-align:center; width:100%;}
+	#reviews h2.block-title {clear:both; float:left; font-family:Roboto !important; font-weight: 700; font-size:36px; line-height:46px; margin:0 0 50px 0; padding:0; position:relative; text-align:center; width:100%;}
 	#reviews .testimonials1 {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
-	#reviews .testimonials1 .slick-arrow {clear:none; cursor:pointer; display:inline-block !important; float:left; font-family:Roboto-Bold !important; font-size:36px; line-height:36px; margin:0; padding:0; position:relative; text-align:center; text-decoration:none; top:190px; width:5%; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; -webkit-transition:all 0.3s ease; transition:all 0.3s ease;}	
+	#reviews .testimonials1 .slick-arrow {clear:none; cursor:pointer; display:inline-block !important; float:left; font-family:Roboto !important; font-weight: 700; font-size:36px; line-height:36px; margin:0; padding:0; position:relative; text-align:center; text-decoration:none; top:190px; width:5%; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; -webkit-transition:all 0.3s ease; transition:all 0.3s ease;}	
 	#reviews .testimonials1 .slick-arrow:hover {-webkit-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1);}
 	#reviews .testimonials1 .slick-list {clear:none; display:inline-block; float:left; margin:0; padding:0 !important; position:relative; width:90%;}
 	#reviews .testimonials1 .slick-list .slick-track {clear:both; float:left; margin:0; padding:0; position:relative;}
@@ -331,13 +322,13 @@
 	#reviews .testimonials1 .slick-list .slick-track .slick-center {transform: scale(1.1); z-index:99;}
 	#reviews .testimonials1 .slick-list .slick-track .item .rating {clear:both; float:left; margin:0 0 10px 0; padding:0; position:relative; text-align:center; width:100%;}
 	#reviews .testimonials1 .slick-list .slick-track .item .rating img {clear:none; display:inline-block; float:none; margin:0; padding:0; position:relative; text-align:center;}
-	#reviews .testimonials1 .slick-list .slick-track .item .header {clear:both; float:left; font-family:Roboto-Medium !important; font-size:18px; line-height:28px; margin:0 0 20px 0; padding:0; position:relative; text-align:center; width:100%;}
-	#reviews .testimonials1 .slick-list .slick-track .item .description {clear:both; float:left; font-family:Roboto-Regular !important; font-size:14px; height:150px; line-height:24px; margin:0 0 20px 0; padding:0; position:relative; text-align:center; width:100%;}
-	#reviews .testimonials1 .slick-list .slick-track .item .name {clear:both; float:left; font-family:Roboto-Medium !important; font-size:16px; line-height:16px; margin:0 0 10px 0; padding:0; position:relative; text-align:center; width:100%;}
-	#reviews .testimonials1 .slick-list .slick-track .item .date {clear:both; float:left; font-family:Roboto-Regular !important; font-size:14px; line-height:14px; margin:0; padding:0; position:relative; text-align:center; width:100%;}
+	#reviews .testimonials1 .slick-list .slick-track .item .header {clear:both; float:left; font-family:Roboto !important; font-weight: 500; font-size:18px; line-height:28px; margin:0 0 20px 0; padding:0; position:relative; text-align:center; width:100%;}
+	#reviews .testimonials1 .slick-list .slick-track .item .description {clear:both; float:left; font-family:Roboto !important; font-size:14px; height:200px; line-height:24px; margin:0 0 20px 0; padding:0; position:relative; text-align:center; width:100%;}
+	#reviews .testimonials1 .slick-list .slick-track .item .name {clear:both; float:left; font-family:Roboto !important; font-weight: 500; font-size:16px; line-height:16px; margin:0 0 10px 0; padding:0; position:relative; text-align:center; width:100%;}
+	#reviews .testimonials1 .slick-list .slick-track .item .date {clear:both; float:left; font-family:Roboto !important; font-size:14px; line-height:14px; margin:0; padding:0; position:relative; text-align:center; width:100%;}
 	
 	#reviews .testimonials2 {clear:both; display:none; float:left; margin:0; padding:0; position:relative; width:100%;}
-	#reviews .testimonials2 .slick-arrow {clear:none; cursor:pointer; display:inline-block !important; float:none; font-family:Roboto-Bold !important; font-size:36px; height:60px; line-height:36px; margin:30px 0 0 0; padding:0; position:relative; text-align:center; text-decoration:none; top:0; width:60px; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; -webkit-transition:all 0.3s ease; transition:all 0.3s ease;}	
+	#reviews .testimonials2 .slick-arrow {clear:none; cursor:pointer; display:inline-block !important; float:none; font-family:Roboto !important; font-weight: 700; font-size:36px; height:60px; line-height:36px; margin:30px 0 0 0; padding:0; position:relative; text-align:center; text-decoration:none; top:0; width:60px; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; -webkit-transition:all 0.3s ease; transition:all 0.3s ease;}	
 	#reviews .testimonials2 .slick-arrow:hover {-webkit-transform: scale(1.2); -ms-transform: scale(1.2); transform: scale(1.2);}
 	#reviews .testimonials2 .slick-list {clear:none; display:inline-block; float:left; margin:0; padding:0 !important; position:relative; width:100%;}
 	#reviews .testimonials2 .slick-list .slick-track {clear:both; float:left; margin:0; padding:0; position:relative;}
@@ -345,55 +336,68 @@
 	#reviews .testimonials2 .slick-list .slick-track .slick-center {transform:none; z-index:99;}
 	#reviews .testimonials2 .slick-list .slick-track .item .rating {clear:both; float:left; margin:0 0 10px 0; padding:0; position:relative; text-align:center; width:100%;}
 	#reviews .testimonials2 .slick-list .slick-track .item .rating img {clear:none; display:inline-block; float:none; margin:0; padding:0; position:relative; text-align:center;}
-	#reviews .testimonials2 .slick-list .slick-track .item .header {clear:both; float:left; font-family:Roboto-Medium !important; font-size:18px; line-height:28px; margin:0 0 20px 0; padding:0; position:relative; text-align:center; width:100%;}
-	#reviews .testimonials2 .slick-list .slick-track .item .description {clear:both; float:left; font-family:Roboto-Regular !important; font-size:14px; height:190px; line-height:24px; margin:0 0 20px 0; padding:0; position:relative; text-align:center; width:100%;}
-	#reviews .testimonials2 .slick-list .slick-track .item .name {clear:both; float:left; font-family:Roboto-Medium !important; font-size:16px; line-height:16px; margin:0 0 10px 0; padding:0; position:relative; text-align:center; width:100%;}
-	#reviews .testimonials2 .slick-list .slick-track .item .date {clear:both; float:left; font-family:Roboto-Regular !important; font-size:14px; line-height:14px; margin:0; padding:0; position:relative; text-align:center; width:100%;}
+	#reviews .testimonials2 .slick-list .slick-track .item .header {clear:both; float:left; font-family:Roboto !important; font-weight: 500; font-size:18px; line-height:28px; margin:0 0 20px 0; padding:0; position:relative; text-align:center; width:100%;}
+	#reviews .testimonials2 .slick-list .slick-track .item .description {clear:both; float:left; font-family:Roboto !important; font-size:14px; height:220px; line-height:24px; margin:0 0 20px 0; padding:0; position:relative; text-align:center; width:100%;}
+	#reviews .testimonials2 .slick-list .slick-track .item .name {clear:both; float:left; font-family:Roboto !important; font-weight: 500; font-size:16px; line-height:16px; margin:0 0 10px 0; padding:0; position:relative; text-align:center; width:100%;}
+	#reviews .testimonials2 .slick-list .slick-track .item .date {clear:both; float:left; font-family:Roboto !important; font-size:14px; line-height:14px; margin:0; padding:0; position:relative; text-align:center; width:100%;}
 	
 /* ТЕКСТОВЫЙ БЛОК
 ================================================== */
 	#text:before {background:url('../img/d23cf23.png') no-repeat top center; content:""; display:inline-block; height:66px; left:0; position:absolute; top:-66px; width:100%;}
-	#text {clear:both; float:left; margin:0; padding:80px 0 100px 0; position:relative; width:100%;}
-	#text .container {border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; clear:both; float:left; margin:0; padding:30px; position:relative; text-align:center; width:100%;}
-	#text .container .first_column {clear:none; display:inline-block; float:left; margin:0 5% 0 0; padding:0; position:relative; width:45%;}
-	#text .container .first_column h2.block-title {clear:both; float:left; font-family:Roboto-Medium !important; font-size:24px; line-height:34px; margin:0 0 40px 0; padding:0; position:relative; text-align:center; width:100%;}
-	#text .container .first_column p {clear:both; float:left; font-family:Roboto-Regular !important; font-size:16px; line-height:26px; margin:0; padding:0; position:relative; text-align:left; width:100%;}
-	#text .container .second_column {clear:none; display:inline-block; float:left; margin:0; padding:0; position:relative; width:50%;}
-	#text .container .second_column .block {border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; clear:both; float:left; font-family:Roboto-Regular !important; font-size:16px; line-height:26px; margin:0 0 20px 0; padding:20px; position:relative; text-align:left; width:100%;}
-	#text .container .second_column .block:last-child {margin:0;}
-	#text .container .second_column .block h3.block-title {clear:both; float:left; font-family:Roboto-Medium !important; font-size:16px; line-height:26px; margin:0 0 10px 0; padding:0; position:relative; text-align:left; width:100%;}
-	#text .container .second_column .block ul {clear:both; float:left; margin:0 0 0 18px; padding:0; position:relative; width:100%;}
-	#text .container .second_column .block ul li {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
-	#text .container .second_column .block ul li::marker {list-style-image:none; list-style-position:outside; list-style-type:disc;}
-	#text .container .button {margin:30px 0 0 0; padding:18px 25px; width:290px;}
+	#text {clear:both; margin:0; padding:80px 0 100px 0; position:relative; width:100%;}
+	#text .wrapper {text-align:center;}
+	#text .layout {text-align: left;border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; padding:30px; box-shadow: 2px 2px 20px rgba(0,0,0,0.1)}
+	#text .container {margin-left:-25px; margin-right: -25px; margin-bottom: 50px; position:relative; text-align:center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row;}
+	#text .container .first_column {position:relative; padding-left: 25px; padding-right: 25px; width:50%;display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column;}
+	#text .container .first_column .layout {-webkit-box-flex: 1; -ms-flex: 1; flex: 1;}
+	#text h2.block-title {font-family:Roboto !important; font-weight: 500; font-size:24px; line-height:23px; margin:0 0 40px 0; position:relative; text-align:center; width:100%; color: #292929;}
+	#text .container .first_column p {font-family:Roboto !important; font-size:16px; line-height:26px; margin:0; padding:0; position:relative; text-align:left; width:100%;}
+	#text .container .second_column {margin:0; position:relative; padding-left: 25px; padding-right: 25px; width:50%;}
+	#text .block {border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; font-family:Roboto !important; font-size:16px; line-height:26px; padding:30px; position:relative; text-align:left; width:100%;}
+	#text .block h2.block-title {text-align: left;}
+	/* #text .container .second_column .block ul {margin:0 0 0 18px; padding:0; position:relative; width:100%;}
+	#text .container .second_column .block ul li {margin:0; padding:0; position:relative; width:100%;}
+	#text .container .second_column .block ul li::marker {list-style-image:none; list-style-position:outside; list-style-type:disc;} */
+	#text .second_column .note {font-size: 13px; line-height: 23px; color: #9b9b9b; margin-top: 20px;}
+	#text ul {list-style: none; padding-left: 20px; margin: 0;}
+	#text ul li {margin-bottom: 20px; list-style-type: none;}
+	#text ul li::before {content: ' '; border-radius: 50%; height: 10px; width: 10px; background-color: #96C11F; font-size: 15px; display: inline-block; margin-left: -20px; margin-right: 10px;}
+	#text ul li:last-child {margin-bottom: 0;}
+	#text .button {margin:40px 0 0 0; padding:18px 25px; width:290px;}
 	
 /* ПОДВАЛ
 ================================================== */
 	#footer {clear:both; float:left; margin:0; padding:50px 0; position:relative; width:100%;}
-	#footer .foot_left {clear:none; display:inline-block; float:left; margin:0; padding:0; position:relative; text-align:left; width:30%;}
+	#footer .foot_left {clear:none; display:inline-block; float:left; margin:0; padding:0; position:relative; text-align:left; width:25%;}
 	#footer .foot_left .logo {clear:both; float:left; margin:0 0 30px 0; padding:0; position:relative;}
 	#footer .foot_left .logo a {clear:both; float:left; margin:0; padding:0; position:relative; text-decoration:none !important;}
 	#footer .foot_left .logo a img {clear:both; float:left; margin:0; padding:0; position:relative;}
-	#footer .foot_left .copyright {clear:both; float:left; font-family:Roboto-Regular !important; font-size:12px; line-height:18px; margin:0 0 30px 0; padding:0; position:relative; width:100%;}
-	#footer .foot_left .copyright p {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
-	#footer .foot_left .social {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
-	#footer .foot_left .social h3 {clear:both; float:left; font-family:Roboto-Medium !important; font-size:16px; line-height:26px; margin:0 0 10px 0; padding:0; position:relative; text-align:left; width:100%;}
-	#footer .foot_left .social ul {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
-	#footer .foot_left .social ul li {clear:none; display:inline-block; float:left; margin:0 10px 0 0; padding:0; position:relative;}
-	#footer .foot_left .social ul li:last-child {margin:0;}
-	#footer .foot_left .social ul li img {clear:both; float:left; margin:0; padding:0; position:relative; width:100%; -moz-transition:all 0.2s ease; -o-transition:all 0.3s ease; -webkit-transition:all 0.2s ease; transition:all 0.2s ease;}
-	#footer .foot_left .social ul li img:hover {clear:both; float:left; margin:0; padding:0; position:relative; width:100%; -moz-transform: rotate(-20deg); -o-transform: rotate(-20deg); -ms-transform: rotate(-20deg); -webkit-transform: rotate(-20deg); transform: rotate(-20deg);}	
-	#footer .foot_center {clear:none; display:inline-block; float:left; margin:0 5%; padding:0; position:relative; text-align:center; width:30%;}
+	#footer .copyright {clear:both; float:left; font-family:Roboto !important; font-size:12px; line-height:18px; margin:0 0 30px 0; padding:0; position:relative; width:100%;}
+	#footer .copyright p {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
+	#footer .social {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
+	#footer .social h3 {clear:both; float:left; font-family:Roboto !important; font-weight: 500; font-size:16px; line-height:26px; margin:0 0 10px 0; padding:0; position:relative; text-align:left; width:100%;}
+	#footer .social ul {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
+	#footer .social ul li {clear:none; display:inline-block; float:left; margin:0 10px 0 0; padding:0; position:relative;}
+	#footer .social ul li:last-child {margin:0;}
+	#footer .social ul li img {clear:both; float:left; margin:0; padding:0; position:relative; width:100%; -moz-transition:all 0.2s ease; -o-transition:all 0.3s ease; -webkit-transition:all 0.2s ease; transition:all 0.2s ease;}
+	#footer .social ul li img:hover {clear:both; float:left; margin:0; padding:0; position:relative; width:100%; -moz-transform: rotate(-20deg); -o-transform: rotate(-20deg); -ms-transform: rotate(-20deg); -webkit-transform: rotate(-20deg); transform: rotate(-20deg);}	
+	#footer .foot_center {clear:none; display:inline-block; float:left; padding:0; position:relative; text-align:justify; width:45%;}
 	#footer .foot_center .links {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
-	#footer .foot_center .links h3 {clear:both; float:left; font-family:Roboto-Medium !important; font-size:16px; line-height:26px; margin:0 0 10px 0; padding:0; position:relative; text-align:left; width:100%;}
+	#footer .foot_center .links h3 {clear:both; float:left; font-family:Roboto !important; font-weight: 500; font-size:16px; line-height:26px; margin:0 0 10px 0; padding:0; position:relative; text-align:left; width:100%;}
 	#footer .foot_center .links ul {clear:both; float:left; margin:0; padding:0; position:relative; width:100%;}
-	#footer .foot_center .links ul li {clear:both; float:left; font-family:Roboto-Regular !important; font-size:16px; line-height:26px; margin:0 0 5px 0; padding:0; text-align:left; position:relative;}
+	#footer .foot_center .links ul li {clear:both; float:left; font-family:Roboto !important; font-size:16px; line-height:26px; margin:0 0 5px 0; padding:0; text-align:left; position:relative;}
 	#footer .foot_right {clear:none; display:inline-block; float:left; margin:0; padding:0; position:relative; text-align:right; width:30%;}
-	#footer .foot_right .support {clear:both; float:left; margin:0 0 30px 0; padding:0; position:relative; width:100%;}
-	#footer .foot_right .support h3 {clear:both; float:left; font-family:Roboto-Medium !important; font-size:16px; line-height:26px; margin:0 0 10px 0; padding:0; position:relative; text-align:right; width:100%;}
-	#footer .foot_right .support p {clear:both; float:left; font-family:Roboto-Regular !important; font-size:16px; line-height:26px; margin:0; padding:0; position:relative; text-align:right; width:100%;}
+	#footer .foot_right .support {clear:both; float:left; padding:0; position:relative; width:100%;}
+	#footer .foot_right .support h3 {clear:both; float:left; font-family:Roboto !important; font-weight: 500; font-size:16px; line-height:26px; margin:0 0 10px 0; padding:0; position:relative; text-align:right; width:100%;}
+	#footer .foot_right .support p {clear:both; float:left; font-family:Roboto !important; font-size:16px; line-height:26px; margin:0; padding:0; position:relative; text-align:right; width:100%;}
 	#footer .foot_right .logos {clear:both; float:left; margin:0; padding:0; position:relative; text-align:right; width:100%;}
 	#footer .foot_right .logos img {clear:none; display:inline-block; float:none; margin:0 10px 10px 0; padding:0; position:relative;}
+
+	#footer .buru {clear: both; float: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row;}
+	#footer .buru__img {width: 40px; height: 40px; margin-right: 20px;}
+	#footer .buru__text {-webkit-box-flex: 1; -ms-flex: 1; flex: 1;}
+	#footer .footer--desktop {display: block;}
+	#footer .footer--mobile {display: none;}
 
 /* ПРОЧЕЕ
 ================================================== */

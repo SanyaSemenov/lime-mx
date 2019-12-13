@@ -186,6 +186,14 @@ RangeSlider.prototype = {
             }
         };
 
+        var onReady = function(e) {
+            if (!_this.minLabelId || _this.maxLabelId) {
+                return;
+            }
+            $('#' + _this.minLabelId).text(_this.minSum);
+            $('#' + _this.maxLabelId).text(_this.maxSum);
+        };
+
         // Touch events
         this.$el.on("touchstart", onMouseDown);
         $(document).on("touchmove", onMove);
@@ -195,6 +203,9 @@ RangeSlider.prototype = {
         this.$el.on("mousedown", onMouseDown);
         $(document).on("mousemove", onMove);
         $(document).on("mouseup mouseleave", onLeave);
+
+        // Document events
+        $(document).on('ready', onReady);
     },
     getCoordinates: function(e) {
         ret = {
@@ -222,7 +233,7 @@ RangeSlider.prototype = {
     },
     getPercentage: function(coordinates) {
         // Find how far across the cursor is relative to the element
-        var width = coordinates.x - this.$el[0].getBoundingClientRect().x;
+        var width = coordinates.x - this.$el[0].getBoundingClientRect().left;
         
         // Check the inner and outer bounds, and reduce if necessary
         if (width < 0) width = 0;
@@ -302,6 +313,9 @@ RangeSlider.prototype = {
             throw new Error("RangeSlider: setPercentage expects a percentage between 0-100, ", percentage, "given");
         }
         this.setBar(percentage/100);
+    },
+    format: function(amount) {
+        return '$' + amount.toLocaleString('en');
     }
 }
 window.RangeSlider = RangeSlider;

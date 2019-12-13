@@ -1,25 +1,26 @@
-var sum = 10000;
+var initialSum = 3000;
+var sum = initialSum;
 function increase()	{
-	if (sum<30000)	{
-		sum += 500;
+	if (sum < rangeSlider.maxSum) {
+		sum += rangeSlider.stepSum;
 		//document.getElementById("slider").stepUp();
 	}
 	update();
 }
 function decrease()	{
-	if (sum>2000)	{
-		sum -= 500;
+	if (sum > rangeSlider.minSum) {
+		sum -= rangeSlider.stepSum;
 		//document.getElementById("slider").stepDown();
 	}
 	update();
 }
-function change()	{
+function change(e)	{
 	try	{
-		sum = parseInt(document.getElementById("editText").value, 10);
-		if (sum>=2000 && sum<=30000)	{
-			//sum = Math.round(sum/500)*500;
+		sum = parseInt(e.value.match(/[0-9]/g).join(''), 10);
+		if (sum >= rangeSlider.minSum && sum <= rangeSlider.maxSum) {
+			//sum = Math.round(sum/stepSum)*stepSum;
 		} else	{
-			sum = 10000;
+			sum = initialSum;
 		}
 		update();
 	} catch (e)	{
@@ -28,12 +29,25 @@ function change()	{
 }
 function update()	{
 	try	{
-		sum = Math.round(sum/500)*500;
+		sum = Math.round(sum / rangeSlider.stepSum) * rangeSlider.stepSum;
 
-		document.getElementById("editText").value = sum;
-		document.getElementById("textLabel").innerHTML = sum;
-		rangeSlider.setBar((sum-2000)/(30000-2000));
+		document.getElementById("editText").value = rangeSlider.format(sum);
+		document.getElementById("textLabel").innerHTML = rangeSlider.format(sum);
+		rangeSlider.setBar((sum - rangeSlider.minSum) / (rangeSlider.maxSum - rangeSlider.minSum));
 	}	catch(e)	{
+		console.log(e);
+	}
+}
+
+function input(e) {
+	try	{
+		const cursor = e.value.length - e.selectionEnd;
+		const numbers = e.value.match(/[0-9]/g);
+		sum = numbers && numbers.length ? parseInt(numbers.join(''), 10) : 0;
+		e.value = rangeSlider.format(sum);
+		e.selectionStart = e.value.length - cursor;
+		e.selectionEnd = e.value.length - cursor;
+	} catch (e)	{
 		console.log(e);
 	}
 }
