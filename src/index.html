@@ -78,12 +78,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					¿Cuánto necesitas? 
 				</div>
 				<div style="padding:20px; display: flex">
-					<div style="font-size:22px; font-weight:500; color: #333333; padding-bottom: 2px; display: flex; flex:1; flex-direction:column; justify-content: flex-end; align-items: flex-start;">
+					<div class="calculator__caption">
 						Cantidad:
 					</div>
 					<div style="display: flex; flex-direction:column;justify-content: flex-end">
 						<div style="border-bottom: 2px solid #97c11f;">
-							<input id="editText" onchange="change(this)" oninput="input(this)" style="display: inline-block; border:none; text-align:right; color: #333333;font: 500 36px/42px Roboto; width:130px" type="tel" min="1000" max="14000" step="100" maxlength="7" value="$3,000">
+							<input id="editText" onchange="change(this)" oninput="input(this)" class="calculator__input" type="tel" min="1000" max="14000" step="100" maxlength="7" value="$3,000">
 						</div>
 					</div>
 				</div>
@@ -116,16 +116,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</div>
 				</div>
 				<div style="padding-left:30px; padding-right:30px">
-					<a href="https://www.lime24.mx/registration" style="padding: 16px 25px; width:100%; font-size:24px; line-height: 28px; font-weight: 700 !important;" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a>
+					<a href="https://www.lime24.mx/registration" class="button orange_button calculator__btn" target="_self" title="Aplicar ahora">Aplicar ahora</a>
 				</div>
-				<div style="font-size:22px; font-weight: 500; padding-left:30px; padding-right:30px;padding-top:20px; color: #333333;">
+				<div class="calculator__return__caption">
 						Cantidad a pagar:&nbsp;
-						<span id="textLabel" style="font-size: 30px; font-weight: 500">
+						<span id="textLabel" class="calculator__return__amount">
 							$3,000
 						</span>
 				</div>
 				<hr style="background-color: #e1e1e1; border:0; height:1px; margin-top:10px; margin-left:30px; margin-right:30px">
-				<div style="font-size:18px; line-height: 21px; color: #333333; text-align:left; padding-left:30px; padding-right:30px; padding-bottom: 5px; padding-top:10px">
+				<div class="calculator__rate__caption" class="calculator__rate__caption">
 					Tasa de Interés Diaria Fija: 1.99%*
 				</div>
 				<div style="font-size: 11px; line-height: 13px; color: #B8B8B8; padding-left: 30px; padding-right: 30px; padding-bottom: 20px;">Tasa promedio para clientes nuevos</div>
@@ -263,12 +263,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<img src="img/yellow-star.svg" />
 						<img src="img/yellow-star.svg" />
 						<img src="img/yellow-star.svg" />
-						<img src="img/gray-star.svg" />
+						<img src="img/yellow-star.svg" />
 						<img src="img/gray-star.svg" />
 					</div>
-					<p class="description">Soy madre soltera y a menudo tengo gastos imprevistos. Utilizo préstamos de Lime porque es fácil, rápido y confiable. Lime siempre aprueba mi préstamo en línea en poco tiempo y cada vez me dá mejores condiciones</p>
-					<p class="name">Blanca Alcázar</p>
-					<p class="date">3 de Febrero, 2019</p>
+					<p class="description">Mi madre ya está bastante viejita. La ayudo con la compra de medicamentos, pero no siempre es posible esperar hasta el día del pago para comprarlos. Luego tomo un préstamo en Lime24 por unos días y compro lo más necesario.</p>
+					<p class="name">Miguel Ángel Flórez</p>
+					<p class="date">7 de Agosto, 2019</p>
+				</div>
+				<div class="item">
+					<div class="rating">
+						<img src="img/yellow-star.svg" />
+						<img src="img/yellow-star.svg" />
+						<img src="img/yellow-star.svg" />
+						<img src="img/yellow-star.svg" />
+						<img src="img/yellow-star.svg" />
+					</div>
+					<p class="description">Somos una familia joven, tenemos una hija de 2 años. Con un niño todos los gastos siempre son inesperados. Doctores, pañales, comida, juguetes... Usamos Lime24 para sobrevivir a estos tiempos difíciles.</p>
+					<p class="name">Alicia García Fernández</p>
+					<p class="date">23 de Octubre, 2019</p>
 				</div>
 				<div class="item">
 					<div class="rating">
@@ -318,17 +330,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<img src="img/gray-star.svg" />
 						<img src="img/gray-star.svg" />
 					</div>
-					<p class="description">Soy madre soltera y a menudo tengo gastos imprevistos. Utilizo préstamos de Lime porque es fácil, rápido y confiable. Lime siempre aprueba mi préstamo en línea en poco tiempo y cada vez me dá mejores condiciones</p>
-					<p class="name">Blanca Alcázar</p>
-					<p class="date">3 de Febrero, 2019</p>
+					<p class="description">Mi madre ya está bastante viejita. La ayudo con la compra de medicamentos, pero no siempre es posible esperar hasta el día del pago para comprarlos. Luego tomo un préstamo en Lime24 por unos días y compro lo más necesario.</p>
+					<p class="name">Miguel Ángel Flórez</p>
+					<p class="date">7 de Agosto, 2019</p>
 				</div>
 				<div class="item">
 					<div class="rating">
 						<img src="img/yellow-star.svg" />
 						<img src="img/yellow-star.svg" />
 						<img src="img/yellow-star.svg" />
+						<img src="img/yellow-star.svg" />
 						<img src="img/gray-star.svg" />
-						<img src="img/gray-star.svg" />
+					</div>
+					<p class="description">Somos una familia joven, tenemos una hija de 2 años. Con un niño todos los gastos siempre son inesperados. Doctores, pañales, comida, juguetes... Usamos Lime24 para sobrevivir a estos tiempos difíciles.</p>
+					<p class="name">Alicia García Fernández</p>
+					<p class="date">23 de Octubre, 2019</p>
+				</div>
+				<div class="item">
+					<div class="rating">
+						<img src="img/yellow-star.svg" />
+						<img src="img/yellow-star.svg" />
+						<img src="img/yellow-star.svg" />
+						<img src="img/yellow-star.svg" />
+						<img src="img/yellow-star.svg" />
 					</div>
 					<p class="description">Soy madre soltera y a menudo tengo gastos imprevistos. Utilizo préstamos de Lime porque es fácil, rápido y confiable. Lime siempre aprueba mi préstamo en línea en poco tiempo y cada vez me dá mejores condiciones</p>
 					<p class="name">Blanca Alcázar</p>

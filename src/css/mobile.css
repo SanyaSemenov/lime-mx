@@ -12,6 +12,12 @@ img {max-width:100%;}
 #slider .logo a img {clear:both; float:none;}
 #slider .calculator {float:left; margin:0 0 20px 0; top:0; width:100%;}
 #slider .calculator .calculator__title {font-size: 24px; line-height: 29px;}
+#slider .calculator .calculator__caption {font-size: 18px; line-height: 21px;}
+#slider .calculator .calculator__input {font-size: 30px; line-height: 35px; width: 115px;}
+#slider .calculator .calculator__btn {font-size: 20px; line-height: 22px; padding: 14px 0;}
+#slider .calculator .calculator__return__caption {font-size:14px; line-height: 16px; font-weight: 400;}
+#slider .calculator .calculator__return__amount {font-size: 24px; line-height: 28px;}
+#slider .calculator .calculator__rate__caption {font-size: 14px; line-height: 16px;}
 #slider .channels {bottom:0; left:0; margin:0 0 40px 0; position:relative; text-align:center; width:100%;}
 #slider .channels .description {clear:both; float:none; font-size:22px; line-height:32px; margin:0 0 10px 0;}
 #slider .channels .logos {clear:none; float:left; text-align:center; width:100%;}
