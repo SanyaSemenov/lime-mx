@@ -52,6 +52,7 @@ img {max-width:100%;}
 #text .container .first_column {margin:0 0 30px 0; width:100%; padding: 0;}
 #text h2.block-title {font-size:24px; line-height:28px; font-weight: 700; text-align: center; margin:0 0 20px 0;}
 #text h2.block-title--small {font-size: 16px; line-height: 23px; font-weight: 500;}
+#text .block__text {font-size: 12px; line-height: 21px;}
 #text .container .first_column p {font-family:Roboto !important; font-size:16px; line-height:26px; margin:0; padding:0; position:relative; text-align:left; width:100%;}
 #text .container .second_column {clear:both; width:100%; padding: 0;}
 #text .container .button {margin:30px 0 0 0; width:100%;}
