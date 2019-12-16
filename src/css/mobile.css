@@ -11,20 +11,21 @@ img {max-width:100%;}
 #slider .logo a {clear:both; float:none;}
 #slider .logo a img {clear:both; float:none;}
 #slider .calculator {float:left; margin:0 0 20px 0; top:0; width:100%;}
+#slider .calculator .calculator__title {font-size: 24px; line-height: 29px;}
 #slider .channels {bottom:0; left:0; margin:0 0 40px 0; position:relative; text-align:center; width:100%;}
 #slider .channels .description {clear:both; float:none; font-size:22px; line-height:32px; margin:0 0 10px 0;}
 #slider .channels .logos {clear:none; float:left; text-align:center; width:100%;}
 #slider .channels .logos img {clear:none; display:inline-block; float:none; height:40px; margin:0; width:80px;}
 
 #conditions {padding:40px 0;}
-#conditions h2.block-title {font-size:30px; line-height:40px; margin:0 0 20px 0;}
+#conditions h2.block-title {font-size:24px; line-height:29px; margin:0 0 20px 0;}
 #conditions .first_table {display:none;}
 #conditions .second_table {display:inline-block;}
 
 #steps:before {display:none;}
 #steps:after {display:none;}
 #steps {padding:30px 0 40px 0;}
-#steps h2.block-title {font-size:30px; line-height:40px; margin:0 0 20px 0;}
+#steps h2.block-title {font-size:24px; line-height:29px; margin:0 0 20px 0;}
 #steps ul li.item {clear:both; float:left; margin:0 0 30px 0; width:100%;}
 #steps ul li.item:last-child {margin:0 0 30px 0;}
 #steps ul li img {height:200px; margin:0 0 20px 0; width:200px;}
@@ -33,18 +34,20 @@ img {max-width:100%;}
 #steps .button {margin:0; width:100%;}
 
 #reviews {padding:30px 0 10px 0;}
-#reviews h2.block-title {font-size:30px; line-height:40px; margin:0;}
+#reviews h2.block-title {font-size:26px; line-height:29px; margin:0;}
 #reviews .testimonials1 {display:none;}
 #reviews .testimonials2 {display:inline-block;}
+#reviews .slick-arrows {display: block;}
 	
 #text:before {display:none;}
 #text {padding:40px 0;}
-#text .container {padding:30px 15px; display: block; margin-bottom: 30px;}
-#text .container .first_column {margin:0 0 30px 0; width:100%;}
-#text h2.block-title {font-size:24px; line-height:28px; font-weight: 500; text-align: center; margin:0 0 20px 0;}
+#text .layout {padding: 20px 15px;}
+#text .container {padding:30px 15px; display: block; margin-bottom: 30px;margin-left: -15px; margin-right: -15px;}
+#text .container .first_column {margin:0 0 30px 0; width:100%; padding: 0;}
+#text h2.block-title {font-size:24px; line-height:28px; font-weight: 700; text-align: center; margin:0 0 20px 0;}
 #text h2.block-title--small {font-size: 16px; line-height: 23px; font-weight: 500;}
-#text .container .first_column p {font-family:Roboto-Regular !important; font-size:16px; line-height:26px; margin:0; padding:0; position:relative; text-align:left; width:100%;}
-#text .container .second_column {clear:both; width:100%;}
+#text .container .first_column p {font-family:Roboto !important; font-size:16px; line-height:26px; margin:0; padding:0; position:relative; text-align:left; width:100%;}
+#text .container .second_column {clear:both; width:100%; padding: 0;}
 #text .container .button {margin:30px 0 0 0; width:100%;}
 #text .block {padding: 20px 15px;}
 
@@ -78,6 +81,6 @@ img {max-width:100%;}
 .desktop_fixed_menu .left_column {width:40%;}
 .desktop_fixed_menu .left_column .logo {margin:0;}
 .desktop_fixed_menu .right_column {width:60%;}
-.desktop_fixed_menu .right_column .button {font-family:Roboto-Regular !important; font-size:16px; line-height:16px; margin:3px 0 0 0; padding:12px 20px; width:auto;}
+.desktop_fixed_menu .right_column .button {font-family:Roboto !important; font-size:16px; line-height:16px; margin:3px 0 0 0; padding:12px 20px; width:auto;}
 	
 }

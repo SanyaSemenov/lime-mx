@@ -187,11 +187,12 @@ RangeSlider.prototype = {
         };
 
         var onReady = function(e) {
-            if (!_this.minLabelId || _this.maxLabelId) {
+            if (!_this.minLabelId || !_this.maxLabelId) {
                 return;
             }
             $('#' + _this.minLabelId).text(_this.minSum);
             $('#' + _this.maxLabelId).text(_this.maxSum);
+            update();
         };
 
         // Touch events

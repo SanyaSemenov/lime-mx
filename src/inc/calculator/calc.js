@@ -1,5 +1,8 @@
 var initialSum = 3000;
 var sum = initialSum;
+const loan_rate = 1.99;
+const loan_period = 30;
+
 function increase()	{
 	if (sum < rangeSlider.maxSum) {
 		sum += rangeSlider.stepSum;
@@ -32,7 +35,7 @@ function update()	{
 		sum = Math.round(sum / rangeSlider.stepSum) * rangeSlider.stepSum;
 
 		document.getElementById("editText").value = rangeSlider.format(sum);
-		document.getElementById("textLabel").innerHTML = rangeSlider.format(sum);
+		document.getElementById("textLabel").innerHTML = rangeSlider.format(calculate(sum));
 		rangeSlider.setBar((sum - rangeSlider.minSum) / (rangeSlider.maxSum - rangeSlider.minSum));
 	}	catch(e)	{
 		console.log(e);
@@ -50,4 +53,11 @@ function input(e) {
 	} catch (e)	{
 		console.log(e);
 	}
+}
+
+function calculate(amount) {
+	if (!amount) {
+		amount = rangeSlider.minSum;
+	}
+	return amount * (100 + loan_rate * loan_period) / 100;
 }

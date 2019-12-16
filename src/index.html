@@ -74,7 +74,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</a>
 			</div>
 			<div class="calculator">
-				<div style="background-color: #eeeeee; color: #333333; border-radius: 5px 5px 0px 0px; font-size: 30px; font-weight: bold; padding: 20px 30px; text-align: center;"> 
+				<div class="calculator__title"> 
 					¿Cuánto necesitas? 
 				</div>
 				<div style="padding:20px; display: flex">
@@ -116,7 +116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</div>
 				</div>
 				<div style="padding-left:30px; padding-right:30px">
-					<a href="https://www.lime24.mx/registration/step1" style="padding: 16px 25px; width:100%; font-size:24px; line-height: 28px; font-weight: 700 !important;" class="button orange_button" target="_self" title="Получить деньги">Aplicar ahora</a>
+					<a href="https://www.lime24.mx/registration" style="padding: 16px 25px; width:100%; font-size:24px; line-height: 28px; font-weight: 700 !important;" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a>
 				</div>
 				<div style="font-size:22px; font-weight: 500; padding-left:30px; padding-right:30px;padding-top:20px; color: #333333;">
 						Cantidad a pagar:&nbsp;
@@ -162,7 +162,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</tr>
 					<tr>
 						<td class="first footer"></td>
-						<td class="second footer"><a href="https://www.lime24.mx/registration/step1" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a></td>
+						<td class="second footer"><a href="https://www.lime24.mx/registration" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a></td>
 					</tr>
 				</table>
 			</div>
@@ -184,7 +184,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<td><span class="second_table__label">Requisitos</span><br>IFE/INE, teléfono celular</td>
 					</tr>
 					<tr>
-						<td class="footer"><a href="https://www.lime24.mx/registration/step1" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a></td>
+						<td class="footer"><a href="https://www.lime24.mx/registration" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a></td>
 					</tr>
 				</table>
 			</div>
@@ -213,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<p class="description">Después de aprobar tu solicitud, enviamos el dinero a tu cuenta de inmediato</p>
 				</li>
 			</ul>
-			<a href="https://www.lime24.mx/registration/step1" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a>			
+			<a href="https://www.lime24.mx/registration" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a>			
 		</div>
 	</div>		
 </div>
@@ -248,8 +248,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						autoplaySpeed: 5000,
 						arrows: true,
 						infinite: true,
-						prevArrow: '<a class="slick-prev"><img src="img/prev-arrow.svg" /></a>',
-						nextArrow: '<a class="slick-next"><img src="img/next-arrow.svg" /></a>',
+						prevArrow: $('.slick-arrows .slick-prev'),
+						nextArrow: $('.slick-arrows .slick-next'),
 						centerMode: true,
 						draggable: true,
 						pauseOnHover: true
@@ -359,6 +359,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<p class="date">17 de Marzo, 2019</p>
 				</div>
 			</div>
+
+			<div class="slick-arrows">
+				<a class="slick-prev slick-arrow"
+					style="display: inline-block;"><img src="img/prev-arrow.svg"></a>
+				<a class="slick-next slick-arrow"
+					style="display: inline-block;"><img src="img/next-arrow.svg"></a>
+			</div>
 		</div>
 	</div>		
 </div>
@@ -401,7 +408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<h2 class="block-title">Importante: Consecuencias de no pagar tu préstamo</h2>
 				<div>Las entidades de crédito pueden imponer multas por retraso de pago sobre el monto de adeudo conforme al límite de plazo especificado en el contrato. En el caso de que no cumplas como prestatario con la obligación contraída en el contrato de crédito respecto al reembolso, la información sobre tu deuda puede ser enviada a uno de los despachos de cobranza en el país autorizados para tal fin para gestionar su cobro.</div>
 			</div>
-			<a href="https://www.lime24.mx/registration/step1" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a>	
+			<a href="https://www.lime24.mx/registration" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a>	
 		</div>
 	</div>		
 </div>
@@ -505,14 +512,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 			</div>
 			<div class="right_column">
-				<a href="https://www.lime-zaim.ru/registration/step1" class="button orange_button" target="_self" title="Получить заём">Получить заём</a>	
+				<a href="https://www.lime24.mx/registration" class="button orange_button" target="_self" title="Aplicar ahora">Aplicar ahora</a>	
 			</div>
 		</div>
 	</div>		
 </div>
 
 <script language="JavaScript" type="text/javascript" src="inc/scrollup/config.js"></script>
-<a href="#top" class="scrollup_button orange_button" target="_self" title="Наверх"><img src="img/top-arrow.svg" /></a>
+<a href="#top" class="scrollup_button orange_button" target="_self" title="Arriba"><img src="img/top-arrow.svg" /></a>
 
 <script language="JavaScript" type="text/javascript" src="inc/preloader/config.js"></script>
 <div class="preloader"><img src="img/preloader.svg" class="rot" /></div>	
